@@ -39,11 +39,13 @@ function Navbar() {
     { path: "/languages/malayalam", name: "Malayalam" },
   ];
 
-  // Normal menu
+  // Normal menu (added Weather)
   const menuLinks = [
     { path: "/", name: "Home" },
     { path: "/BlogsIndex", name: "Blog" },
     { path: "/CommunityIndex", name: "Community" },
+    { path: "/FertilizerForm", name: "Fertilizers" },
+    { path: "/WeatherForecastIndex", name: "Weather" }, // ✅ Added Weather
   ];
 
   return (
@@ -90,7 +92,7 @@ function Navbar() {
             </li>
           ))}
 
-          {/* Languages Dropdown - Click Toggle */}
+          {/* Languages Dropdown */}
           <li className="relative" ref={dropdownRef}>
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -121,8 +123,17 @@ function Navbar() {
           </li>
         </ul>
 
-        {/* Recommend Button + Profile Icon */}
+        {/* Right Side: Fertilization Form + Recommend + Profile */}
         <div className="hidden md:flex items-center gap-4">
+          <Link
+            to="/FertilizerForm"
+            className="px-4 py-2 text-sm font-semibold rounded-full 
+              bg-gradient-to-r from-blue-300 to-sky-300 hover:from-blue-400 hover:to-sky-400 
+              text-gray-900 shadow-md transition-all duration-300"
+          >
+            Fertilization
+          </Link>
+
           <Link
             to="/RecommendIndex"
             className="px-5 py-2 text-sm font-semibold rounded-full 
@@ -187,10 +198,21 @@ function Navbar() {
               </ul>
             </li>
 
-            {/* Recommend + Profile in Mobile */}
+            {/* Fertilization + Recommend + Profile in Mobile */}
             <li>
               <Link
-                to="/recommend"
+                to="/FertilizerForm"
+                onClick={() => setOpen(false)}
+                className="px-4 py-2 text-sm font-semibold rounded-full 
+                  bg-gradient-to-r from-blue-300 to-sky-300 hover:from-blue-400 hover:to-sky-400 
+                  text-gray-900 shadow-md transition-all duration-300 inline-block text-center"
+              >
+                Fertilization
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/RecommendIndex"
                 onClick={() => setOpen(false)}
                 className="px-5 py-2 text-sm font-semibold rounded-full 
                   bg-gradient-to-r from-green-300 to-lime-300 hover:from-green-400 hover:to-lime-400 

@@ -5,6 +5,8 @@ import HomeIndex from './Components/HomePage/HomeIndex';
 import CommunityIndex from './Components/Community/CommunityIndex';
 import BlogsIndex from './Components/Blogs/BlogsIndex';
 import RecommendIndex from './Components/Recommend/RecommendIndex';
+import FertilizerForm from './Components/Fertilizers/FertilizersForm';
+import WeatherForecastIndex from './Components/WeatherForecast/WeatherForecastIndex';
 // import About from './pages/About';
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
         <Route path="/CommunityIndex" element={<CommunityIndex />} />
         <Route path="/BlogsIndex" element={<BlogsIndex />} />
         <Route path="/RecommendIndex" element={<RecommendIndex />} />
+        <Route path="/FertilizerForm" element={<FertilizerForm />} />
+        <Route path="/WeatherForecastIndex" element={<WeatherForecastIndex />} />
         {/* <Route path="/about" element={<About />} /> */}
       </Routes>
     </div>
