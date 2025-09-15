@@ -45,7 +45,9 @@ function Navbar() {
     { path: "/BlogsIndex", name: "Blog" },
     { path: "/CommunityIndex", name: "Community" },
     { path: "/FertilizerForm", name: "Fertilizers" },
-    { path: "/WeatherForecastIndex", name: "Weather" }, // ✅ Added Weather
+    { path: "/WeatherForecastIndex", name: "Weather" },
+    { path: "/MarketPlaceIndex", name: "Market Ledger" }, 
+     // ✅ Added Weather
   ];
 
   return (
